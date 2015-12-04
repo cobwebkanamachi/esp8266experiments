@@ -9,3 +9,5 @@ OS env is osx 10.10.5<BR>
 3. test<BR>
 3.1 connect esp8266 with FTDI via serial term with 115200bps<BR>
 3.2 AT+GMR<BR>
+
+# Thanx http://nemuisan.blog.bai.ne.jp/?month=201506
