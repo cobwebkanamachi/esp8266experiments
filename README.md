@@ -1,5 +1,7 @@
 # esp8266experiments
 These are experiments for Expressif's esp8266 module.<BR>
+I use this bellow.<BR>
+http://akizukidenshi.com/catalog/g/gM-09607/<BR>
 1. How to write firmware to esp8266<BR>
 1.1 you need to install pyserial<BR>
 1.2 and then install esptool.py<BR>
