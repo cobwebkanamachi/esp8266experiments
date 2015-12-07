@@ -75,6 +75,14 @@ suggests that vbox shared folder from host to vagrant that two folders.<BR>
 4.6.5.7 sudo /bin/sh ./bootstrap.sh<BR>
 you should be wait for few minutes "[INFO ]  Retrieving needed toolchain components' tarballs"<BR>
 notices are here (6minuites?)<BR>
+like this:<BR>
+Now configured for "xtensa-lx106-elf"<BR>
+[INFO ]  Performing some trivial sanity checks<BR>
+[INFO ]  Build started 20151207.105418<BR>
+[INFO ]  Building environment variables<BR>
+[INFO ]  =================================================================<BR>
+[INFO ]  Retrieving needed toolchain components' tarballs<BR>
+[04:42] | <BR>
 http://www.esp8266.jp/blog/?p=133<BR>
 #obsolete procedure bellow.<BR>
 I am experiment make vagrant image, so bellow is obsolete:-)<BR>
