@@ -14,21 +14,21 @@ OS env is osx 10.10.5<BR>
 3.1 connect esp8266 with FTDI via serial term with 115200bps<BR>
 3.2 AT+GMR<BR>
 4. SDK<BR>
-4.1 we use vagrant.
-choose vagrant file bellow for experiment.
-https://github.com/kmpm/esp8266-vagrant
-please clone.
-4.2 get image of ubuntu/trusty32
-vagrant box add ubuntu/trusty32  https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-i386-vagrant-disk1.box
-4.3 vagrant up
-but you suffer some error..
-4.4 ssh
-ssh -p 2222 vagrant@127.0.0.1
-4.5 uname -a
-vagrant@vagrant-ubuntu-trusty-32:~$ uname -a
-Linux vagrant-ubuntu-trusty-32 3.13.0-71-generic #114-Ubuntu SMP Tue Dec 1 02:35:20 UTC 2015 i686 i686 i686 GNU/Linux
-now i am here:0)
-#obsolete procedure bellow.
+4.1 we use vagrant.<BR>
+choose vagrant file bellow for experiment.<BR>
+https://github.com/kmpm/esp8266-vagrant<BR>
+please clone.<BR>
+4.2 get image of ubuntu/trusty32<BR>
+vagrant box add ubuntu/trusty32  https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-i386-vagrant-disk1.box<BR>
+4.3 vagrant up<BR>
+but you suffer some error..<BR>
+4.4 ssh<BR>
+ssh -p 2222 vagrant@127.0.0.1<BR>
+4.5 uname -a<BR>
+vagrant@vagrant-ubuntu-trusty-32:~$ uname -a<BR>
+Linux vagrant-ubuntu-trusty-32 3.13.0-71-generic #114-Ubuntu SMP Tue Dec 1 02:35:20 UTC 2015 i686 i686 i686 GNU/Linux<BR>
+now i am here:0)<BR>
+#obsolete procedure bellow.<BR>
 I am experiment make vagrant image, so bellow is obsolete:-)<BR>
 I will change this section after.<BR>
 4.1 1st you would better to read<BR>
