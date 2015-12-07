@@ -27,6 +27,11 @@ ssh -p 2222 vagrant@127.0.0.1<BR>
 4.5 uname -a<BR>
 vagrant@vagrant-ubuntu-trusty-32:~$ uname -a<BR>
 Linux vagrant-ubuntu-trusty-32 3.13.0-71-generic #114-Ubuntu SMP Tue Dec 1 02:35:20 UTC 2015 i686 i686 i686 GNU/Linux<BR>
+4.6 some workarounds<BR>
+4.6.1 /vagrant/bootstrap.sh<BR>
+if you use proxy, add export https_proxy=http://user:pass@proxyhost:port<BR>
+and if you need add also export http_proxy=...<BR>
+4.6.2 add git command<BR>
 now i am here:0)<BR>
 #obsolete procedure bellow.<BR>
 I am experiment make vagrant image, so bellow is obsolete:-)<BR>
