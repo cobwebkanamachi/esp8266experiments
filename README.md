@@ -14,6 +14,18 @@ OS env is osx 10.10.5<BR>
 3.1 connect esp8266 with FTDI via serial term with 115200bps<BR>
 3.2 AT+GMR<BR>
 4. SDK<BR>
+4.1 we use vagrant.
+choose vagrant file bellow for experiment.
+https://github.com/kmpm/esp8266-vagrant
+please clone.
+4.2 get image of ubuntu/trusty32
+vagrant box add ubuntu/trusty32  https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-i386-vagrant-disk1.box
+4.3 vagrant up
+but you suffer some error..
+4.4 ssh
+ssh -p 2222 vagrant@127.0.0.1
+4.5 now i am here:0)
+#obsolete procedure bellow.
 I am experiment make vagrant image, so bellow is obsolete:-)<BR>
 I will change this section after.<BR>
 4.1 1st you would better to read<BR>
