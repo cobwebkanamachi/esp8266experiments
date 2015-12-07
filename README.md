@@ -59,7 +59,6 @@ Now configured for "xtensa-lx106-elf"<BR>
 [ERROR]   <BR>
 [ERROR]  (elapsed: 24158034:03.55)<BR>
 [00:00] / make: *** [build] Error 1<BR>
-now i am here:0)<BR>
 Will i fix this ???:0)<BR>
 https://github.com/slaff/esp8266.dev.box/issues/6<BR>
 suggests that vbox shared folder from host to vagrant that two folders.<BR>
@@ -84,6 +83,19 @@ Now configured for "xtensa-lx106-elf"<BR>
 [INFO ]  Retrieving needed toolchain components' tarballs<BR>
 [04:42] | <BR>
 http://www.esp8266.jp/blog/?p=133<BR>
+at 7:18 is doing this:<BR>
+vagrant@vagrant-ubuntu-trusty-32:/vagrant/scripts$ ps -efl|grep wget<BR>
+0 S vagrant   8430  8426  0  80   0 -  1306 poll_s 11:01 pts/0    00:00:00 wget --passive-ftp --tries=3 -nc --progress=dot:binary -T 10 -O /vagrant/Espressif/crosstool-NG/.build/tarballs/gdb-7.5.1.tar.bz2.tmp-dl http://ftp.gnu.org/pub/gnu/gdb/gdb-7.5.1.tar.bz2<BR>
+changes print out was here:<BR>
+INFO ]  Retrieving needed toolchain components' tarballs<BR>
+[INFO ]  Retrieving needed toolchain components' tarballs: done in 526.26s (at 08:48)<BR>
+[INFO ]  =================================================================<BR>
+[INFO ]  Extracting and patching toolchain components<BR>
+[09:54] - <BR>
+:<BR>
+[INFO ]  Installing GMP for host<BR>
+[10:29] | <BR>
+now i am here:0)<BR>
 #obsolete procedure bellow.<BR>
 I am experiment make vagrant image, so bellow is obsolete:-)<BR>
 I will change this section after.<BR>
