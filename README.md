@@ -32,6 +32,7 @@ Linux vagrant-ubuntu-trusty-32 3.13.0-71-generic #114-Ubuntu SMP Tue Dec 1 02:35
 if you use proxy, add export https_proxy=http://user:pass@proxyhost:port<BR>
 and if you need add also export http_proxy=...<BR>
 4.6.2 add git command<BR>
+http://git-scm.com/download/linux<BR>
 now i am here:0)<BR>
 #obsolete procedure bellow.<BR>
 I am experiment make vagrant image, so bellow is obsolete:-)<BR>
