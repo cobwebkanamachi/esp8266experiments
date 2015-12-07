@@ -13,5 +13,13 @@ OS env is osx 10.10.5<BR>
 3. test<BR>
 3.1 connect esp8266 with FTDI via serial term with 115200bps<BR>
 3.2 AT+GMR<BR>
-
-# Thanx http://nemuisan.blog.bai.ne.jp/?month=201506
+4. SDK
+4.1 1st you would better to read
+http://www.esp8266.com/wiki/doku.php?id=setup-windows-compiler-esp8266
+4.2 download sysgcc all in one installer
+Prebuilt GNU toolchain for esp8266
+http://gnutoolchains.com/esp8266/
+# but you would need to install rm or other commands by yourself:-).
+4.3 you would suffer some error to invoke make clean 
+http://d.hatena.ne.jp/ir9Ex/20121206/1354774247
+#Thanx http://nemuisan.blog.bai.ne.jp/?month=201506
