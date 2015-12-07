@@ -24,7 +24,10 @@ vagrant box add ubuntu/trusty32  https://cloud-images.ubuntu.com/vagrant/trusty/
 but you suffer some error..
 4.4 ssh
 ssh -p 2222 vagrant@127.0.0.1
-4.5 now i am here:0)
+4.5 uname -a
+vagrant@vagrant-ubuntu-trusty-32:~$ uname -a
+Linux vagrant-ubuntu-trusty-32 3.13.0-71-generic #114-Ubuntu SMP Tue Dec 1 02:35:20 UTC 2015 i686 i686 i686 GNU/Linux
+now i am here:0)
 #obsolete procedure bellow.
 I am experiment make vagrant image, so bellow is obsolete:-)<BR>
 I will change this section after.<BR>
