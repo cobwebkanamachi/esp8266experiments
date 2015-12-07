@@ -95,7 +95,16 @@ INFO ]  Retrieving needed toolchain components' tarballs<BR>
 :<BR>
 [INFO ]  Installing GMP for host<BR>
 [10:29] | <BR>
-now i am here:0)<BR>
+:<BR>
+[INFO ]  Installing GMP for host: done in 66.96s (at 11:29)<BR>
+[INFO ]  =================================================================<BR>
+[INFO ]  Installing MPFR for host<BR>
+[11:41] / <BR>
+[INFO ]  Installing MPFR for host: done in 32.25s (at 12:02)<BR>
+[INFO ]  =================================================================<BR>
+[INFO ]  Installing ISL for host<BR>
+[12:08] / <BR>
+now i am here:0), i kill proc today....:)<BR>
 #obsolete procedure bellow.<BR>
 I am experiment make vagrant image, so bellow is obsolete:-)<BR>
 I will change this section after.<BR>
