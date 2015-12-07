@@ -65,6 +65,17 @@ https://github.com/slaff/esp8266.dev.box/issues/6<BR>
 suggests that vbox shared folder from host to vagrant that two folders.<BR>
 1 is esp8266-vagrant/Espressif to /opt/Espressif<BR>
 2 is esp8266-vagrant to vagrant<BR>
+4.6.5 fix crosstool-NG<BR>
+4.6.5.1 you umount shared folders<BR>
+4.6.5.2 you are on host folder, then tar cvf ../opt-Espressif ./Espressif<BR>
+4.6.5.3 share folders from osx to ubuntu for temporally.<BR>
+4.6.5.4 sudo su -<BR>
+4.6.5.5 cp -rp /media/sf_vagrant /vagrant<BR>
+4.6.5.6 make symlink to /opt/Espressif from /vagrant/Espressif<BR>
+4.6.5.7 sudo /bin/sh ./bootstrap.sh<BR>
+you should be wait for few minutes "[INFO ]  Retrieving needed toolchain components' tarballs"<BR>
+notices are here (6minuites?)<BR>
+http://www.esp8266.jp/blog/?p=133<BR>
 #obsolete procedure bellow.<BR>
 I am experiment make vagrant image, so bellow is obsolete:-)<BR>
 I will change this section after.<BR>
