@@ -61,6 +61,10 @@ Now configured for "xtensa-lx106-elf"<BR>
 [00:00] / make: *** [build] Error 1<BR>
 now i am here:0)<BR>
 Will i fix this ???:0)<BR>
+https://github.com/slaff/esp8266.dev.box/issues/6<BR>
+suggests that vbox shared folder from host to vagrant that two folders.<BR>
+1 is esp8266-vagrant/Espressif to /opt/Espressif<BR>
+2 is esp8266-vagrant to vagrant<BR>
 #obsolete procedure bellow.<BR>
 I am experiment make vagrant image, so bellow is obsolete:-)<BR>
 I will change this section after.<BR>
