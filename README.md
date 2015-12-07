@@ -35,7 +35,32 @@ then exec this manually after ssh login<BR>
 sudo /bin/sh ./bootstrap.sh<BR>
 4.6.2 add git command<BR>
 http://git-scm.com/download/linux<BR>
+4.6.3 build crosstool-NG
+add bootstrap.sh bellow two line.<BR>
+git config --global http.proxy http://user:pass@proxy:port<BR>
+git config --global https.proxy http://user:pass@proxy:port<BR>
+and change git line to this(if you use proxy).
+git clone -b lx106 https://github.com/jcmvbkbc/crosstool-NG.git <BR>
+4.6.4 crosstool-NG workaround<BR>
+Now configured for "xtensa-lx106-elf"<BR>
+[INFO ]  Performing some trivial sanity checks<BR>
+[ERROR]  Your file system in '/opt/Espressif/crosstool-NG/.build' is *not* case-sensitive!<BR>
+[ERROR]   <BR>
+[ERROR]  >><BR>
+[ERROR]  >>  Build failed in step '(top-level)'<BR>
+[ERROR]  >><BR>
+[ERROR]  >>  Error happened in: CT_Abort[scripts/functions@331]<BR>
+[ERROR]  >>        called from: CT_TestAndAbort[scripts/functions@351]<BR>
+[ERROR]  >>        called from: main[scripts/crosstool-NG.sh@93]<BR>
+[ERROR]  >><BR>
+[ERROR]  >>  For more info on this error, look at the file: 'build.log'<BR>
+[ERROR]  >>  There is a list of known issues, some with workarounds, in:<BR>
+[ERROR]  >>      '/vagrant/scripts/share/doc/crosstool-ng/ct-ng.1.20.0/B - Known issues.txt'<BR>
+[ERROR]   <BR>
+[ERROR]  (elapsed: 24158034:03.55)<BR>
+[00:00] / make: *** [build] Error 1<BR>
 now i am here:0)<BR>
+Will i fix this ???:0)<BR>
 #obsolete procedure bellow.<BR>
 I am experiment make vagrant image, so bellow is obsolete:-)<BR>
 I will change this section after.<BR>
