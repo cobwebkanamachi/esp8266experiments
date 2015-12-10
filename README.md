@@ -105,6 +105,16 @@ INFO ]  Retrieving needed toolchain components' tarballs<BR>
 [INFO ]  Installing ISL for host<BR>
 [12:08] / <BR>
 now i am here:0), i kill proc today....:)<BR>
+another day, continued.
+(1) cd esp8266-vagrant
+(2) vagrant up
+(3) umount /opt/Espressif
+(4) umount /vagrant
+(5) or you could permanently umount these mount points.
+ (recently you cp -rp vbox-mountpoint(/opt/Espressif) to /vagrant/Espressif,
+  and you cp -rp vbox-mountpoint(/vagrant) to /vagrant, i assumed above)
+then you could continue bootstrap.sh again(re-exec).
+now i am here:0)
 #obsolete procedure bellow.<BR>
 I am experiment make vagrant image, so bellow is obsolete:-)<BR>
 I will change this section after.<BR>
