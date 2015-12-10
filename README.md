@@ -114,6 +114,73 @@ another day, continued.
  (recently you cp -rp vbox-mountpoint(/opt/Espressif) to /vagrant/Espressif,
   and you cp -rp vbox-mountpoint(/vagrant) to /vagrant, i assumed above)
 then you could continue bootstrap.sh again(re-exec).
+---
+(snip)
+If you complete execution of bootstrap.sh, you would get lines bellow.
+For auto-completion, do not forget to install 'ct-ng.comp' into
+your bash completion directory (usually /etc/bash_completion.d)
+  CONF  config/config.in
+#
+# configuration saved
+#
+
+***********************************************************
+
+Initially reported by: Max Filippov <jcmvbkbc@gmail.com>
+URL: http://www.esp8266.com/viewtopic.php?f=9&t=224
+
+***********************************************************
+
+WARNING! This sample may enable experimental features.
+         Please be sure to review the configuration prior
+         to building and using your toolchain!
+Now, you have been warned!
+
+***********************************************************
+
+Now configured for "xtensa-lx106-elf"
+[INFO ]  Performing some trivial sanity checks
+[INFO ]  Build started 20151209.010243
+[INFO ]  Building environment variables
+[INFO ]  =================================================================
+[INFO ]  Retrieving needed toolchain components' tarballs
+[INFO ]  Retrieving needed toolchain components' tarballs: done in 0.04s (at 00:
+01)
+[INFO ]  =================================================================
+[INFO ]  Extracting and patching toolchain components
+[INFO ]  Extracting and patching toolchain components: done in 0.21s (at 00:01)
+[INFO ]  =================================================================
+[INFO ]  Installing GMP for host
+[INFO ]  Installing GMP for host: done in 63.38s (at 01:05)
+[INFO ]  =================================================================
+[INFO ]  Installing MPFR for host
+[INFO ]  Installing MPFR for host: done in 32.28s (at 01:37)
+[INFO ]  =================================================================
+[INFO ]  Installing ISL for host
+[INFO ]  Installing ISL for host: done in 58.86s (at 02:36)
+[INFO ]  =================================================================
+[INFO ]  Installing CLooG for host
+[INFO ]  Installing CLooG for host: done in 9.21s (at 02:45)
+[INFO ]  =================================================================
+[INFO ]  Installing MPC for host
+[INFO ]  Installing MPC for host: done in 9.89s (at 02:55)
+[INFO ]  =================================================================
+[INFO ]  Installing binutils for host
+[INFO ]  Installing binutils for host: done in 117.32s (at 04:52)
+[INFO ]  =================================================================
+[INFO ]  Installing final compiler
+[INFO ]  Installing final compiler: done in 559.76s (at 14:12)
+[INFO ]  =================================================================
+[INFO ]  Installing cross-gdb
+[INFO ]  Installing cross-gdb: done in 212.10s (at 17:44)
+[INFO ]  =================================================================
+[INFO ]  Cleaning-up the toolchain's directory
+[INFO ]    Stripping all toolchain executables
+[INFO ]  Cleaning-up the toolchain's directory: done in 2.55s (at 17:47)
+[INFO ]  Build completed at 20151209.012030
+[INFO ]  (elapsed: 17:47.19)
+[INFO ]  Finishing installation (may take a few seconds)...
+[17:47] / root@vagrant-ubuntu-trusty-32:/vagrant/scripts# 
 now i am here:0)
 #obsolete procedure bellow.<BR>
 I am experiment make vagrant image, so bellow is obsolete:-)<BR>
