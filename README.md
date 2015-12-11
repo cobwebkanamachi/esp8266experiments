@@ -314,5 +314,6 @@ include/user_config.h:#define STA_SSID "DVES_HOME"<BR>
 (2) you could edit STA_SSID<BR>
 further is my study (next week).:0<BR>
 <BR>
-I read this.<BR>
+I read these.<BR>
+https://github.com/themadinventor/esptool
 https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf<BR>
