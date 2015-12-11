@@ -2,8 +2,8 @@
 These are experiments for Espressif's esp8266 module.<BR>
 I use this bellow.<BR>
 http://akizukidenshi.com/catalog/g/gM-09607/<BR>
-#1. How to write firmware to esp8266<BR>
-#1.1 you need to install pyserial<BR>
+##1. How to write firmware to esp8266<BR>
+##1.1 you need to install pyserial<BR>
 #1.2 and then install esptool.py<BR>
 #1.3 download esp_iot_sdk_v1.4.0_15_09_18.zip from expressif bbs<BR>
 #1.4 extract firmware files from zip to ./bin (under esp_iot_sdk_v1.4.0_15_09_18/esp_iot_sdk_v1.4.0/bin to ./bin)<BR>
