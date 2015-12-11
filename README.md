@@ -254,6 +254,20 @@ Generate 0x00000.bin and 0x40000.bin successully in folder firmware.<BR>
 0x40000.bin-------->0x40000<BR>
 Done<BR>
 <BR>
+5.10 Makefile changes (summary)
+#XTENSA_TOOLS_ROOT ?= c:/Espressif/xtensa-lx106-elf/bin
+XTENSA_TOOLS_ROOT ?= /vagrant/Espressif/crosstool-NG/builds/xtensa-lx106-elf/bin
+#SDK_BASE       ?= c:/Espressif/ESP8266_SDK
+SDK_BASE        ?= ../../ESP8266_SDK
+ESPTOOL ?= /vagrant/Espressif/esptool-py/esptool.py
+ESPPORT ?= /dev/ttyUSB0
+SPI_SIZE_MAP ?= 6
+#SPI_SIZE_MAP ?= 0
+EXTRA_INCDIR = include $(SDK_BASE)/../extra/include /vagrant/Espressif/include
+:
+snip
+:
+you could tweak with yourself!
 5.11 if you succeed to make firmware, you would get bellow.<BR>
 qtt# ls -la firmware<BR>
 total 280<BR>
@@ -261,15 +275,4 @@ drwxr-xr-x 2 root root   4096 Dec 11 06:33 .<BR>
 drwxr-xr-x 9 root root   4096 Dec 11 08:13 ..<BR>
 -rw-r--r-- 1 root root  34192 Dec 11 06:33 0x00000.bin<BR>
 -rw-r--r-- 1 root root 240596 Dec 11 06:33 0x40000.bin<BR>
-#obsolete procedure bellow.<BR>
-I am experiment make vagrant image, so bellow is obsolete:-)<BR>
-I will change this section after.<BR>
-4.1 1st you would better to read<BR>
-http://www.esp8266.com/wiki/doku.php?id=setup-windows-compiler-esp8266<BR>
-4.2 download sysgcc all in one installer<BR>
-Prebuilt GNU toolchain for esp8266<BR>
-http://gnutoolchains.com/esp8266/<BR>
-but you would need to install rm or other commands by yourself:-).<BR>
-4.3 you would suffer some error to invoke make clean <BR>
-http://d.hatena.ne.jp/ir9Ex/20121206/1354774247<BR>
-#Thanx http://nemuisan.blog.bai.ne.jp/?month=201506<BR>
+
