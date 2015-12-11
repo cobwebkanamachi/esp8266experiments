@@ -187,7 +187,7 @@ Now configured for "xtensa-lx106-elf"<BR>
 ###5.3 umount /vagrant<BR>
 ###5.4 cd /vagrant/scripts<BR>
 ###5.5 cp sdk.sh sdk2.sh<BR>
-###5.6 change like bellow.<BR>
+###5.6 change like bellow, then execute like: /bin/sh sdk2.sh<BR>
 &sharp;!/usr/bin/env bash<BR>
 if [ -f /vagrant/options ]; then<BR>
         echo "reading options"<BR>
