@@ -237,7 +237,7 @@ build/app.out:     file format elf32-xtensa-le<BR>
 <BR>
 Sections:<BR>
 Idx Name          Size      VMA       LMA       File off  Algn<BR>
-  0 .data         00000398  3ffe8000  3ffe8000  000000e0  2¥*¥*¥*¥*4<BR>
+  0 .data         00000398  3ffe8000  3ffe8000  000000e0  2\*\*4<BR>
                   CONTENTS, ALLOC, LOAD, DATA<BR>
   1 .rodata       00001228  3ffe83a0  3ffe83a0  00000480  2**4<BR>
                   CONTENTS, ALLOC, LOAD, READONLY, DATA<BR>
