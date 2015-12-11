@@ -182,6 +182,30 @@ Now configured for "xtensa-lx106-elf"<BR>
 [INFO ]  Finishing installation (may take a few seconds)...<BR>
 [17:47] / root@vagrant-ubuntu-trusty-32:/vagrant/scripts# <BR>
 now i am here:0)<BR>
+5.SDK ressurection<BR>
+5.1 vagrant up<BR>
+5.2 umount /opt/Espressif<BR>
+5.3 umount /vagrant<BR>
+5.4 cd /vagrant/scripts<BR>
+5.5 cp sdk.sh sdk2.sh<BR>
+5.6 change like bellow.<BR>
+#!/usr/bin/env bash<BR>
+if [ -f /vagrant/options ]; then<BR>
+        echo "reading options"<BR>
+        . /vagrant/options<BR>
+fi<BR>
+export BASE_FOLDER=/vagrant/Espressif<BR>
+export SDK_FOLDER=${BASE_FOLDER}/ESP8266_SDK<BR>
+export DOWNLOADS=/vagrant/downloads<BR>
+export http_proxy=http://user:pass@proxy:port<BR>
+export https_proxy=http://user:pass@proxy:port<BR>
+git config --global http.proxy http://user:pass@proxy:port<BR>
+git config --global https.proxy http://user:pass@proxy:port<BR>
+git clone https://github.com/CHERTS/esp8266-devkit<BR>
+export SDK_FOLDER=/vagrant/scripts/esp8266-devkit/Espressif/ESP8266_SDK<BR>
+cd $SDK_FOLDER<BR>
+wget -O lib/libc.a https://github.com/esp8266/esp8266-wiki/raw/master/libs/libc.a<BR>
+wget -O lib/libhal.a https://github.com/esp8266/esp8266-wiki/raw/master/libs/libhal.a<BR>
 #obsolete procedure bellow.<BR>
 I am experiment make vagrant image, so bellow is obsolete:-)<BR>
 I will change this section after.<BR>
