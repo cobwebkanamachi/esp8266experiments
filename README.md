@@ -321,3 +321,4 @@ https://github.com/themadinventor/esptool<BR>
 and this(FTDI will not shown as /dev/ttyUSB0 for this)<BR>
 http://osdir.com/ml/ubuntu-bugs/2015-10/msg00431.html<BR>
 Subject: [Bug 1501760] Re: ftdi USB<->TTL adapter stops working with 3.13.0-65-generic<BR>
+http://www.ftdichip.com/Drivers/D2XX/Linux/ReadMe-linux.txt
