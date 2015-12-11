@@ -26,7 +26,7 @@ but you suffer some error..<BR>
 ssh -p 2222 vagrant@127.0.0.1<BR>
 4.5 uname -a<BR>
 vagrant@vagrant-ubuntu-trusty-32:~$ uname -a<BR>
-Linux vagrant-ubuntu-trusty-32 3.13.0-71-generic #114-Ubuntu SMP Tue Dec 1 02:35:20 UTC 2015 i686 i686 i686 GNU/Linux<BR>
+Linux vagrant-ubuntu-trusty-32 3.13.0-71-generic &sharp;114-Ubuntu SMP Tue Dec 1 02:35:20 UTC 2015 i686 i686 i686 GNU/Linux<BR>
 4.6 some workarounds<BR>
 4.6.1 /vagrant/bootstrap.sh<BR>
 if you use proxy, add export https_proxy=http://user:pass@proxyhost:port<BR>
@@ -120,9 +120,9 @@ If you complete execution of bootstrap.sh, you would get lines bellow.<BR>
 For auto-completion, do not forget to install 'ct-ng.comp' into<BR>
 your bash completion directory (usually /etc/bash_completion.d)<BR>
   CONF  config/config.in<BR>
-#<BR>
-# configuration saved<BR>
-#<BR>
+&sharp;<BR>
+&sharp; configuration saved<BR>
+&sharp;<BR>
 <BR>
 ***********************************************************<BR>
 <BR>
@@ -180,7 +180,7 @@ Now configured for "xtensa-lx106-elf"<BR>
 [INFO ]  Build completed at 20151209.012030<BR>
 [INFO ]  (elapsed: 17:47.19)<BR>
 [INFO ]  Finishing installation (may take a few seconds)...<BR>
-[17:47] / root@vagrant-ubuntu-trusty-32:/vagrant/scripts# <BR>
+[17:47] / root@vagrant-ubuntu-trusty-32:/vagrant/scripts&sharp; <BR>
 now i am here:0)<BR>
 5.SDK ressurection<BR>
 5.1 vagrant up<BR>
@@ -189,7 +189,7 @@ now i am here:0)<BR>
 5.4 cd /vagrant/scripts<BR>
 5.5 cp sdk.sh sdk2.sh<BR>
 5.6 change like bellow.<BR>
-#!/usr/bin/env bash<BR>
+&sharp;!/usr/bin/env bash<BR>
 if [ -f /vagrant/options ]; then<BR>
         echo "reading options"<BR>
         . /vagrant/options<BR>
@@ -213,7 +213,7 @@ export PATH=$PATH:/vagrant/Espressif/crosstool-NG/builds/xtensa-lx106-elf/xensa-
 export PATH=$PATH:/vagrant/Espressif/crosstool-NG/builds/xtensa-lx106-elf/bin<BR>
 make clean<BR>
 make FLAVOR="release" all STANDALONE=n<BR>
-#make flash<BR>
+&sharp;make flash<BR>
 you could make with this script to tweak your intent to make procedures.<BR>
 5.9 /bin/sh ./mk.sh<BR>
 you would get just like bellow.<BR>
@@ -254,22 +254,22 @@ Generate 0x00000.bin and 0x40000.bin successully in folder firmware.<BR>
 0x40000.bin-------->0x40000<BR>
 Done<BR>
 <BR>
-5.10 Makefile changes (summary)
-&sharp;XTENSA_TOOLS_ROOT ?= c:/Espressif/xtensa-lx106-elf/bin
-XTENSA_TOOLS_ROOT ?= /vagrant/Espressif/crosstool-NG/builds/xtensa-lx106-elf/bin
-#SDK_BASE       ?= c:/Espressif/ESP8266_SDK
-SDK_BASE        ?= ../../ESP8266_SDK
-ESPTOOL ?= /vagrant/Espressif/esptool-py/esptool.py
-ESPPORT ?= /dev/ttyUSB0
-SPI_SIZE_MAP ?= 6
-#SPI_SIZE_MAP ?= 0
-EXTRA_INCDIR = include $(SDK_BASE)/../extra/include /vagrant/Espressif/include
-:
-snip
-:
-you could tweak with yourself!
+5.10 Makefile changes (summary)<BR>
+&sharp;XTENSA_TOOLS_ROOT ?= c:/Espressif/xtensa-lx106-elf/bin<BR>
+XTENSA_TOOLS_ROOT ?= /vagrant/Espressif/crosstool-NG/builds/xtensa-lx106-elf/bin<BR>
+&sharp;SDK_BASE       ?= c:/Espressif/ESP8266_SDK<BR>
+SDK_BASE        ?= ../../ESP8266_SDK<BR>
+ESPTOOL ?= /vagrant/Espressif/esptool-py/esptool.py<BR>
+ESPPORT ?= /dev/ttyUSB0<BR>
+SPI_SIZE_MAP ?= 6<BR>
+&sharp;SPI_SIZE_MAP ?= 0<BR>
+EXTRA_INCDIR = include $(SDK_BASE)/../extra/include /vagrant/Espressif/include<BR>
+:<BR>
+snip<BR>
+:<BR>
+you could tweak with yourself!<BR>
 5.11 if you succeed to make firmware, you would get bellow.<BR>
-qtt# ls -la firmware<BR>
+ls -la firmware<BR>
 total 280<BR>
 drwxr-xr-x 2 root root   4096 Dec 11 06:33 .<BR>
 drwxr-xr-x 9 root root   4096 Dec 11 08:13 ..<BR>
