@@ -255,7 +255,7 @@ Generate 0x00000.bin and 0x40000.bin successully in folder firmware.<BR>
 Done<BR>
 <BR>
 5.10 Makefile changes (summary)
-##XTENSA_TOOLS_ROOT ?= c:/Espressif/xtensa-lx106-elf/bin
+&sharp;XTENSA_TOOLS_ROOT ?= c:/Espressif/xtensa-lx106-elf/bin
 XTENSA_TOOLS_ROOT ?= /vagrant/Espressif/crosstool-NG/builds/xtensa-lx106-elf/bin
 #SDK_BASE       ?= c:/Espressif/ESP8266_SDK
 SDK_BASE        ?= ../../ESP8266_SDK
