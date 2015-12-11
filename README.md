@@ -2,46 +2,46 @@
 These are experiments for Espressif's esp8266 module.<BR>
 I use this bellow.<BR>
 http://akizukidenshi.com/catalog/g/gM-09607/<BR>
-##1. How to write firmware to esp8266<BR>
-##1.1 you need to install pyserial<BR>
-#1.2 and then install esptool.py<BR>
-#1.3 download esp_iot_sdk_v1.4.0_15_09_18.zip from expressif bbs<BR>
-#1.4 extract firmware files from zip to ./bin (under esp_iot_sdk_v1.4.0_15_09_18/esp_iot_sdk_v1.4.0/bin to ./bin)<BR>
-#2. And then, how to program firmware<BR>
+###1. How to write firmware to esp8266<BR>
+###1.1 you need to install pyserial<BR>
+###1.2 and then install esptool.py<BR>
+###1.3 download esp_iot_sdk_v1.4.0_15_09_18.zip from expressif bbs<BR>
+###1.4 extract firmware files from zip to ./bin (under esp_iot_sdk_v1.4.0_15_09_18/esp_iot_sdk_v1.4.0/bin to ./bin)<BR>
+###2. And then, how to program firmware<BR>
 OS env is osx 10.10.5<BR>
 /Library/Frameworks/Python.framework/Versions/2.7/bin/esptool.py --port /dev/tty.usbserial-XXXXXXXX -b 9600 write_flash -ff 40m -fm qio -fs 32m 0x00000 "bin/boot_v1.4(b1).bin" 0x01000 bin/at/1024+1024/user1.2048.new.5.bin 0xfe000 bin/blank.bin 0x3fc000 bin/esp_init_data_default.bin 0x3fe000 bin/blank.bin<BR>
-#3. test<BR>
-#3.1 connect esp8266 with FTDI via serial term with 115200bps<BR>
-#3.2 AT+GMR<BR>
-#4. SDK<BR>
-#4.1 we use vagrant.<BR>
+###3. test<BR>
+###3.1 connect esp8266 with FTDI via serial term with 115200bps<BR>
+###3.2 AT+GMR<BR>
+###4. SDK<BR>
+###4.1 we use vagrant.<BR>
 choose vagrant file bellow for experiment.<BR>
 https://github.com/kmpm/esp8266-vagrant<BR>
 please clone.<BR>
-4.2 get image of ubuntu/trusty32<BR>
+###4.2 get image of ubuntu/trusty32<BR>
 vagrant box add ubuntu/trusty32  https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-i386-vagrant-disk1.box<BR>
-4.3 vagrant up<BR>
+###4.3 vagrant up<BR>
 but you suffer some error..<BR>
-4.4 ssh<BR>
+###4.4 ssh<BR>
 ssh -p 2222 vagrant@127.0.0.1<BR>
-4.5 uname -a<BR>
+###4.5 uname -a<BR>
 vagrant@vagrant-ubuntu-trusty-32:~$ uname -a<BR>
 Linux vagrant-ubuntu-trusty-32 3.13.0-71-generic &sharp;114-Ubuntu SMP Tue Dec 1 02:35:20 UTC 2015 i686 i686 i686 GNU/Linux<BR>
-4.6 some workarounds<BR>
-4.6.1 /vagrant/bootstrap.sh<BR>
+###4.6 some workarounds<BR>
+###4.6.1 /vagrant/bootstrap.sh<BR>
 if you use proxy, add export https_proxy=http://user:pass@proxyhost:port<BR>
 and if you need add also export http_proxy=...<BR>
 then exec this manually after ssh login<BR>
 sudo /bin/sh ./bootstrap.sh<BR>
-4.6.2 add git command<BR>
+###4.6.2 add git command<BR>
 http://git-scm.com/download/linux<BR>
-4.6.3 build crosstool-NG
+###4.6.3 build crosstool-NG
 add bootstrap.sh bellow two line.<BR>
 git config --global http.proxy http://user:pass@proxy:port<BR>
 git config --global https.proxy http://user:pass@proxy:port<BR>
 and change git line to this(if you use proxy).
 git clone -b lx106 https://github.com/jcmvbkbc/crosstool-NG.git <BR>
-4.6.4 crosstool-NG workaround<BR>
+###4.6.4 crosstool-NG workaround<BR>
 Now configured for "xtensa-lx106-elf"<BR>
 [INFO ]  Performing some trivial sanity checks<BR>
 [ERROR]  Your file system in '/opt/Espressif/crosstool-NG/.build' is *not* case-sensitive!<BR>
@@ -64,14 +64,14 @@ https://github.com/slaff/esp8266.dev.box/issues/6<BR>
 suggests that vbox shared folder from host to vagrant that two folders.<BR>
 1 is esp8266-vagrant/Espressif to /opt/Espressif<BR>
 2 is esp8266-vagrant to vagrant<BR>
-4.6.5 fix crosstool-NG<BR>
-4.6.5.1 you umount shared folders<BR>
-4.6.5.2 you are on host folder, then tar cvf ../opt-Espressif ./Espressif<BR>
-4.6.5.3 share folders from osx to ubuntu for temporally.<BR>
-4.6.5.4 sudo su -<BR>
-4.6.5.5 cp -rp /media/sf_vagrant /vagrant<BR>
-4.6.5.6 make symlink to /opt/Espressif from /vagrant/Espressif<BR>
-4.6.5.7 sudo /bin/sh ./bootstrap.sh<BR>
+###4.6.5 fix crosstool-NG<BR>
+###4.6.5.1 you umount shared folders<BR>
+###4.6.5.2 you are on host folder, then tar cvf ../opt-Espressif ./Espressif<BR>
+###4.6.5.3 share folders from osx to ubuntu for temporally.<BR>
+###4.6.5.4 sudo su -<BR>
+###4.6.5.5 cp -rp /media/sf_vagrant /vagrant<BR>
+###4.6.5.6 make symlink to /opt/Espressif from /vagrant/Espressif<BR>
+###4.6.5.7 sudo /bin/sh ./bootstrap.sh<BR>
 you should be wait for few minutes "[INFO ]  Retrieving needed toolchain components' tarballs"<BR>
 notices are here (6minuites?)<BR>
 like this:<BR>
@@ -106,11 +106,11 @@ INFO ]  Retrieving needed toolchain components' tarballs<BR>
 [12:08] / <BR>
 now i am here:0), i kill proc today....:)<BR>
 another day, continued.<BR>
-(1) cd esp8266-vagrant<BR>
-(2) vagrant up<BR>
-(3) umount /opt/Espressif<BR>
-(4) umount /vagrant<BR>
-(5) or you could permanently umount these mount points.<BR>
+###(1) cd esp8266-vagrant<BR>
+###(2) vagrant up<BR>
+###(3) umount /opt/Espressif<BR>
+###(4) umount /vagrant<BR>
+###(5) or you could permanently umount these mount points.<BR>
  (recently you cp -rp vbox-mountpoint(/opt/Espressif) to /vagrant/Espressif,<BR>
   and you cp -rp vbox-mountpoint(/vagrant) to /vagrant, i assumed above)<BR>
 then you could continue bootstrap.sh again(re-exec).<BR>
@@ -181,14 +181,13 @@ Now configured for "xtensa-lx106-elf"<BR>
 [INFO ]  (elapsed: 17:47.19)<BR>
 [INFO ]  Finishing installation (may take a few seconds)...<BR>
 [17:47] / root@vagrant-ubuntu-trusty-32:/vagrant/scripts&sharp; <BR>
-now i am here:0)<BR>
-5.SDK ressurection<BR>
-5.1 vagrant up<BR>
-5.2 umount /opt/Espressif<BR>
-5.3 umount /vagrant<BR>
-5.4 cd /vagrant/scripts<BR>
-5.5 cp sdk.sh sdk2.sh<BR>
-5.6 change like bellow.<BR>
+###5.SDK ressurection<BR>
+###5.1 vagrant up<BR>
+###5.2 umount /opt/Espressif<BR>
+###5.3 umount /vagrant<BR>
+###5.4 cd /vagrant/scripts<BR>
+###5.5 cp sdk.sh sdk2.sh<BR>
+###5.6 change like bellow.<BR>
 &sharp;!/usr/bin/env bash<BR>
 if [ -f /vagrant/options ]; then<BR>
         echo "reading options"<BR>
@@ -206,8 +205,8 @@ export SDK_FOLDER=/vagrant/scripts/esp8266-devkit/Espressif/ESP8266_SDK<BR>
 cd $SDK_FOLDER<BR>
 wget -O lib/libc.a https://github.com/esp8266/esp8266-wiki/raw/master/libs/libc.a<BR>
 wget -O lib/libhal.a https://github.com/esp8266/esp8266-wiki/raw/master/libs/libhal.a<BR>
-5.7 cd /vagrant/scripts/esp8266-devkit/Espressif/examples/esp_mqtt<BR>
-5.8 vi mk.sh<BR>
+###5.7 cd /vagrant/scripts/esp8266-devkit/Espressif/examples/esp_mqtt<BR>
+###5.8 vi mk.sh<BR>
 edit like bellow.<BR>
 export PATH=$PATH:/vagrant/Espressif/crosstool-NG/builds/xtensa-lx106-elf/xensa-lx106-elf/bin<BR>
 export PATH=$PATH:/vagrant/Espressif/crosstool-NG/builds/xtensa-lx106-elf/bin<BR>
@@ -215,7 +214,7 @@ make clean<BR>
 make FLAVOR="release" all STANDALONE=n<BR>
 &sharp;make flash<BR>
 you could make with this script to tweak your intent to make procedures.<BR>
-5.9 /bin/sh ./mk.sh<BR>
+###5.9 /bin/sh ./mk.sh<BR>
 you would get just like bellow.<BR>
 /bin/sh mk.sh<BR>
 CC driver/uart.c<BR>
@@ -254,7 +253,7 @@ Generate 0x00000.bin and 0x40000.bin successully in folder firmware.<BR>
 0x40000.bin-------->0x40000<BR>
 Done<BR>
 <BR>
-5.10 Makefile changes (summary)<BR>
+###5.10 Makefile changes (summary)<BR>
 &sharp;XTENSA_TOOLS_ROOT ?= c:/Espressif/xtensa-lx106-elf/bin<BR>
 XTENSA_TOOLS_ROOT ?= /vagrant/Espressif/crosstool-NG/builds/xtensa-lx106-elf/bin<BR>
 &sharp;SDK_BASE       ?= c:/Espressif/ESP8266_SDK<BR>
@@ -268,7 +267,7 @@ EXTRA_INCDIR = include $(SDK_BASE)/../extra/include /vagrant/Espressif/include<B
 snip<BR>
 :<BR>
 you could tweak with yourself!<BR>
-5.11 if you succeed to make firmware, you would get bellow.<BR>
+###5.11 if you succeed to make firmware, you would get bellow.<BR>
 ls -la firmware<BR>
 total 280<BR>
 drwxr-xr-x 2 root root   4096 Dec 11 06:33 .<BR>
