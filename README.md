@@ -1,4 +1,4 @@
-# esp8266experiments
+#* esp8266experiments
 These are experiments for Espressif's esp8266 module.<BR>
 I use this bellow.<BR>
 http://akizukidenshi.com/catalog/g/gM-09607/<BR>
@@ -124,19 +124,19 @@ your bash completion directory (usually /etc/bash_completion.d)<BR>
 &sharp; configuration saved<BR>
 &sharp;<BR>
 <BR>
-***********************************************************<BR>
+-----------------------------------------------------------<BR>
 <BR>
 Initially reported by: Max Filippov <jcmvbkbc@gmail.com><BR>
 URL: http://www.esp8266.com/viewtopic.php?f=9&t=224<BR>
 <BR>
-***********************************************************<BR>
+-----------------------------------------------------------<BR>
 <BR>
 WARNING! This sample may enable experimental features.<BR>
          Please be sure to review the configuration prior<BR>
          to building and using your toolchain!<BR>
 Now, you have been warned!<BR>
 <BR>
-***********************************************************<BR>
+-----------------------------------------------------------<BR>
 <BR>
 Now configured for "xtensa-lx106-elf"<BR>
 [INFO ]  Performing some trivial sanity checks<BR>
@@ -237,7 +237,7 @@ build/app.out:     file format elf32-xtensa-le<BR>
 <BR>
 Sections:<BR>
 Idx Name          Size      VMA       LMA       File off  Algn<BR>
-  0 .data         00000398  3ffe8000  3ffe8000  000000e0  2¥*¥*4<BR>
+  0 .data         00000398  3ffe8000  3ffe8000  000000e0  2\**4<BR>
                   CONTENTS, ALLOC, LOAD, DATA<BR>
   1 .rodata       00001228  3ffe83a0  3ffe83a0  00000480  2**4<BR>
                   CONTENTS, ALLOC, LOAD, READONLY, DATA<BR>
