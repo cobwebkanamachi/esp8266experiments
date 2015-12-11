@@ -216,7 +216,44 @@ make FLAVOR="release" all STANDALONE=n<BR>
 #make flash<BR>
 you could make with this script to tweak your intent to make procedures.<BR>
 5.9 /bin/sh ./mk.sh<BR>
-5.10 <BR>
+you would get just like bellow.<BR>
+/bin/sh mk.sh<BR>
+CC driver/uart.c<BR>
+CC user/user_main.c<BR>
+CC mqtt/mqtt.c<BR>
+CC mqtt/mqtt_msg.c<BR>
+CC mqtt/proto.c<BR>
+CC mqtt/queue.c<BR>
+CC mqtt/ringbuf.c<BR>
+CC mqtt/utils.c<BR>
+CC modules/config.c<BR>
+CC modules/wifi.c<BR>
+AR build/app_app.a<BR>
+LD build/app.out<BR>
+------------------------------------------------------------------------------<BR>
+Section info:<BR>
+<BR>
+build/app.out:     file format elf32-xtensa-le<BR>
+<BR>
+Sections:<BR>
+Idx Name          Size      VMA       LMA       File off  Algn<BR>
+  0 .data         00000398  3ffe8000  3ffe8000  000000e0  2**4<BR>
+                  CONTENTS, ALLOC, LOAD, DATA<BR>
+  1 .rodata       00001228  3ffe83a0  3ffe83a0  00000480  2**4<BR>
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA<BR>
+  2 .bss          00006510  3ffe95c8  3ffe95c8  000016a8  2**4<BR>
+                  ALLOC<BR>
+  3 .text         00006fa6  40100000  40100000  000016a8  2**2<BR>
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE<BR>
+  4 .irom0.text   0003abd4  40240000  40240000  00008650  2**4<BR>
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE<BR>
+------------------------------------------------------------------------------<BR>
+------------------------------------------------------------------------------<BR>
+Generate 0x00000.bin and 0x40000.bin successully in folder firmware.<BR>
+0x00000.bin-------->0x00000<BR>
+0x40000.bin-------->0x40000<BR>
+Done<BR>
+<BR>
 5.11 if you succeed to make firmware, you would get bellow.<BR>
 qtt# ls -la firmware<BR>
 total 280<BR>
