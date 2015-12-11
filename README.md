@@ -275,5 +275,44 @@ drwxr-xr-x 9 root root   4096 Dec 11 08:13 ..<BR>
 -rw-r--r-- 1 root root  34192 Dec 11 06:33 0x00000.bin<BR>
 -rw-r--r-- 1 root root 240596 Dec 11 06:33 0x40000.bin<BR>
 <BR>
+###5.11 scp bins<BR>
+scp firmware/*.bin user@hostip:path-of-anywhere-you-choose<BR>
+###5.12 write to esp8266<BR>
+esptool.py --port /dev/tty.usbserial-XXXXXXXX -b 9600 write_flash 0x00000 0x00000.bin 0x40000 0x40000.bin<BR>
+you could get lines like bellow.<BR>
+Connecting...<BR>
+Erasing flash...<BR>
+Wrote 34816 bytes at 0x00000000 in 38.8 seconds (7.2 kbit/s)...<BR>
+Erasing flash...<BR>
+Wrote 240640 bytes at 0x00040000 in 269.2 seconds (7.2 kbit/s)...<BR>
+<BR>
+Leaving...<BR>
+<BR>
+###5.13 now i am here<BR>
+I got just like bellow when exec esp8266 with reset.<BR>
+I get these lines from serial console.<BR>
+scandone<BR>
+no DVES_HOME found, reconnect after 1s<BR>
+---<BR>
+reconnect<BR>
+STATION_IDLE<BR>
+STATION_IDLE<BR>
+STATION_IDLE<BR>
+STATION_IDLE<BR>
+STATION_IDLE<BR>
+scandone<BR>
+no DVES_HOME found, reconnect after 1s<BR>
+reconnect<BR>
+STATION_NO_AP_FOUND<BR>
+scandone<BR>
+<BR>
+---<BR>
+workarround:<BR>
+(1) what is this message<BR>
+grep -r DVES_HOME *<BR>
+include/user_config.h:#define STA_SSID "DVES_HOME"<BR>
+(2) you could edit STA_SSID<BR>
+further is my study (next week).:0<BR>
+<BR>
 I read this.<BR>
 https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf<BR>
