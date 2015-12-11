@@ -315,5 +315,9 @@ include/user_config.h:#define STA_SSID "DVES_HOME"<BR>
 further is my study (next week).:0<BR>
 <BR>
 I read these.<BR>
-https://github.com/themadinventor/esptool<BR>
 https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf<BR>
+and when write down binaries by esptool.py, arguments are got from this.<BR>
+https://github.com/themadinventor/esptool<BR>
+and this(FTDI will not shown as /dev/ttyUSB0 for this)<BR>
+http://osdir.com/ml/ubuntu-bugs/2015-10/msg00431.html<BR>
+Subject: [Bug 1501760] Re: ftdi USB<->TTL adapter stops working with 3.13.0-65-generic<BR>
