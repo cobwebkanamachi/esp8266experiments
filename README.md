@@ -206,6 +206,24 @@ export SDK_FOLDER=/vagrant/scripts/esp8266-devkit/Espressif/ESP8266_SDK<BR>
 cd $SDK_FOLDER<BR>
 wget -O lib/libc.a https://github.com/esp8266/esp8266-wiki/raw/master/libs/libc.a<BR>
 wget -O lib/libhal.a https://github.com/esp8266/esp8266-wiki/raw/master/libs/libhal.a<BR>
+5.7 cd /vagrant/scripts/esp8266-devkit/Espressif/examples/esp_mqtt<BR>
+5.8 vi mk.sh<BR>
+edit like bellow.<BR>
+export PATH=$PATH:/vagrant/Espressif/crosstool-NG/builds/xtensa-lx106-elf/xensa-lx106-elf/bin<BR>
+export PATH=$PATH:/vagrant/Espressif/crosstool-NG/builds/xtensa-lx106-elf/bin<BR>
+make clean<BR>
+make FLAVOR="release" all STANDALONE=n<BR>
+#make flash<BR>
+you could make with this script to tweak your intent to make procedures.<BR>
+5.9 /bin/sh ./mk.sh<BR>
+5.10 <BR>
+5.11 if you succeed to make firmware, you would get bellow.<BR>
+qtt# ls -la firmware<BR>
+total 280<BR>
+drwxr-xr-x 2 root root   4096 Dec 11 06:33 .<BR>
+drwxr-xr-x 9 root root   4096 Dec 11 08:13 ..<BR>
+-rw-r--r-- 1 root root  34192 Dec 11 06:33 0x00000.bin<BR>
+-rw-r--r-- 1 root root 240596 Dec 11 06:33 0x40000.bin<BR>
 #obsolete procedure bellow.<BR>
 I am experiment make vagrant image, so bellow is obsolete:-)<BR>
 I will change this section after.<BR>
